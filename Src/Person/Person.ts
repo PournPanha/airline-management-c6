@@ -1,7 +1,3 @@
-export enum Gender {
-    Male,
-    Female
-}
 export abstract class Person {
     constructor(
         protected firstName: string,
