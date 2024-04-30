@@ -1,4 +1,5 @@
-import { Gender, Person } from "../../Person/Person";
+import {Person } from "../../Person/Person";
+import { Gender } from "../../enum/Gender";
 
 export class Employee extends Person {
     constructor(
