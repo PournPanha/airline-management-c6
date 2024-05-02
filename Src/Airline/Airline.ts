@@ -1,3 +1,11 @@
+import { Employee } from "../Person/Employee/Employee";
+import { Airplane } from "./Airplane/Airplane"
+
 export class Airline{
-    constructor(private name: string){}
+    private employees: Employee[];
+    private airplanes: Airplane[];
+
+    constructor(
+        private name: string,
+    ){}
 }

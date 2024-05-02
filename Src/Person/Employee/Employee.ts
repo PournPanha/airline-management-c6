@@ -11,7 +11,7 @@ export class Employee extends Person {
         nationality: string,
         protected salary: number
     ) {
-        super(firstName, lastName, age, phone, nationality);
+        super(firstName, lastName, age, gender, phone, nationality);
     }
 
     getSalary(): number {

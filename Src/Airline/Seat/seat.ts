@@ -1,3 +1,7 @@
-export class Seat{
-    constructor(private seatNumber:number){}
+
+export class Seat {
+    constructor(
+        private seatNumber: string,
+    ) {}
+
 }

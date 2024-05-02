@@ -1,5 +1,5 @@
 import { Passenger } from "../../Person/Passenger/Passenger";
-import { Seat } from "../Seat/seat";
+import { Seat } from "../Seat/Seat";
 
 export class PassengerSeat {
     constructor(
@@ -9,5 +9,9 @@ export class PassengerSeat {
 
     getPassenger(): Passenger {
         return this.passenger;
+    }
+
+    getSeat(): Seat {
+        return this.seat;
     }
 }
