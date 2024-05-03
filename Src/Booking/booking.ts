@@ -1,26 +1,32 @@
+import { CreditCard } from "../Person/Passenger/CreditCard";
 import { Passenger } from "../Person/Passenger/Passenger";
 import { Ticket } from "../Ticket/Ticket";
-import { Flight } from "../Airline/Flight/Flight";
+// import { Flight } from "../Airline/Flight/Flight";
 import { Trip } from "../Trip/Trip";
 
 export class Booking {
-    private bookReference: string;
+    private bookingReferenceNumber: string;
     private price: number;
     private passenger: Passenger;
     private ticket: Ticket;
     private trip: Trip;
-    private flights: Flight[];
-
-    constructor(bookReference: string, price: number, passenger: Passenger, ticket: Ticket) {
-        this.bookReference = bookReference;
+    // private flights: Flight[];
+    private creditCard: CreditCard;
+    constructor(
+        bookingReferenceNumber: string, 
+        price: number, 
+        passenger: Passenger, 
+        ticket: Ticket
+    ) {
+        this.bookingReferenceNumber = bookingReferenceNumber;
         this.price = price;
         this.passenger = passenger;
         this.ticket = ticket;
-        this.flights = [];
+        // this.flights = [];
     }
 
     public getReference(): string {
-        return this.bookReference;
+        return this.bookingReferenceNumber;
     }
 
     public getPrice(): number {
@@ -35,20 +41,12 @@ export class Booking {
         return this.ticket;
     }
 
-    public addFlight(flight: Flight): void {
-        this.flights.push(flight);
-    }
+    // public addFlight(flight: Flight): void {
+    //     this.flights.push(flight);
+    // }
 
-    public getFlights(): Flight[] {
-        return this.flights;
-    }
-
-
-    passengerDetial(bookReference: string){
-        let Information = []
-        // Information.push(this.passenger)
-        return Information
-
-    }
+    // public getFlights(): Flight[] {
+    //     return this.flights;
+    // }
     
 }

@@ -1,10 +1,16 @@
-import { Seat } from "../Seat/Seat";
+import { Seat } from "../Seat/seat";
 import { Airline } from "../Airline";
+import { Employee } from "../../Person/Employee/Employee";
+import { Pilot } from "../Pilot/pilot";
+import { Flight } from "../Flight/Flight";
 export class Airplane {
-    private seats: Seat[] = [];
     constructor(
-        private registrationNumber: string, 
-        private airline: Airline
+        private registrationNumber: string,  
+        private seats: Seat[] = [],
+        private airline: Airline,
+        private employees: Employee[] = [],
+        private pilots: Pilot[] = [],
+        private flights: Flight[] = [],
     ) {}
 
     addSeat(seatNumber: string): Seat {

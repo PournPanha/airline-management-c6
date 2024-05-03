@@ -1,4 +1,5 @@
 import { Flight } from "../Airline/Flight/Flight";
+import { TicketType } from "../enum/TicketType";
 
 export class Ticket {
   private flights: Flight[];

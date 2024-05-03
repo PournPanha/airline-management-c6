@@ -1,35 +1,34 @@
-import { PassengerSeat } from "../SeatPassenger/SeatPassenger";
+import { SeatPassenger } from "../SeatPassenger/SeatPassenger";
 import { DateTime } from "../../DateTime/DateTime";
 import { Gate } from "../../Airport/Gate";
 import { Airplane } from "../Airplane/Airplane";
 import { Trip } from "../../Trip/Trip";
 import { Passenger } from "../../Person/Passenger/Passenger";
-import { Seat } from "../Seat/Seat";
+import { Seat } from "../Seat/seat";
 
 export class Flight {
-    private passengerSeats: PassengerSeat[] = [];
-
+    private passengerSeats: SeatPassenger[] = [];
     constructor(
         private flightNumber: string,
-        private aeroplane: Airplane,
-        private startTime: DateTime,
-        private endTime: DateTime,
-        private gate: Gate,
+        private airplane: Airplane,
+        private departureTime: DateTime,
+        private arrivalTime: DateTime,
+        private gate: Gate
         // private trip: Trip // Changed variable name to 'trip'
     ) {
         this.flightNumber = flightNumber;
-        this.aeroplane = aeroplane;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        this.airplane = airplane;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
         this.gate = gate;
         // this.trip = trip;
     }
 
     addPassengerSeat(passenger: Passenger, seat: Seat) {
-        this.passengerSeats.push(new PassengerSeat(passenger, seat));
+        this.passengerSeats.push(new SeatPassenger(passenger, seat));
     }
 
-    getPassengerSeats(): PassengerSeat[] {
+    getPassengerSeats(): SeatPassenger[] {
         return this.passengerSeats;
     }
 
@@ -40,12 +39,12 @@ export class Flight {
         return this.flightNumber;
     }
     getStartTime(): DateTime {
-        return this.startTime;
+        return this.departureTime;
     }
     getEndTime(): DateTime {
-        return this.endTime;
+        return this.arrivalTime;
     }
     getAeroplane(): Airplane {
-        return this.aeroplane;
+        return this.airplane;
     }
 }

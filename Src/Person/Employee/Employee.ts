@@ -9,7 +9,7 @@ export class Employee extends Person {
         age: number,
         phone: string,
         nationality: string,
-        protected salary: number
+        private salary: number
     ) {
         super(firstName, lastName, age, gender, phone, nationality);
     }

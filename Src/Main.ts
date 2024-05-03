@@ -31,7 +31,7 @@ let airport1 = new Airport("PNCAirport", "2F-code", "USA");
 let gate = new Gate('A1', airport1)
 
 // Airline 
-let LeangAirLine = new Airline("Leang");
+let LeangAirLine = new Airline("Leang", "2F-code");
 
 // Create Airplane
 let plane1 = new Airplane("JSk",LeangAirLine);
