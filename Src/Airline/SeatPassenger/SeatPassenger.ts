@@ -1,7 +1,7 @@
 import { Passenger } from "../../Person/Passenger/Passenger";
 import { Seat } from "../Seat/seat";
 
-export class​ SeatPassenger {
+export class SeatPassenger {
     constructor(
         private passenger: Passenger,
         private seat: Seat

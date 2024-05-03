@@ -6,4 +6,8 @@ export class Route {
         private arrivalPlace: Airport,
         private flight: Flight,
     ){}
+
+    getFlight(){
+        return this.flight.getAirplane();
+    }
 }

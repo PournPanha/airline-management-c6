@@ -3,18 +3,18 @@ import { Gender } from "../../enum/Gender";
 
 export class Employee extends Person {
     constructor(
-        firstName: string,
-        lastName: string,
+        name: string,
         gender: Gender,
         age: number,
         phone: string,
         nationality: string,
         private salary: number
     ) {
-        super(firstName, lastName, age, gender, phone, nationality);
+        super(name, age, gender, phone, nationality);
     }
 
     getSalary(): number {
         return this.salary;
     }
+
 }

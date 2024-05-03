@@ -7,7 +7,7 @@ export class Airport {
   private name: string;
   private country: string;
   private code: string;
-  private routes: Route[];
+  private routes: Route[]=[];
   private bookings: Booking[];
   private gates: Gate[];
   private airplanes: Airline[]= [];
@@ -33,5 +33,16 @@ export class Airport {
   }
   public getName(): string {
     return this.name;
+  }
+
+  
+  public addRoutes(routes: Route){
+    this.routes.push(routes);
+  }
+  
+  public getPassengerBookings() {
+    for (let route of this.routes) {
+      return route.getFlight();
+    }
   }
 }

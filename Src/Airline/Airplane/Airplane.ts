@@ -12,10 +12,17 @@ export class Airplane {
         private pilots: Pilot[] = [],
         private flights: Flight[] = [],
     ) {}
+    
+    addPilot(pilot: Pilot) {
+        this.pilots.push(pilot);
+    }
 
     addSeat(seatNumber: string): Seat {
         let newSeat = new Seat(seatNumber);
         this.seats.push(newSeat);
         return newSeat;
+    }
+    getSeat(){
+        return this.seats;
     }
 }

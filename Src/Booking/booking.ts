@@ -1,8 +1,8 @@
 import { CreditCard } from "../Person/Passenger/CreditCard";
 import { Passenger } from "../Person/Passenger/Passenger";
 import { Ticket } from "../Ticket/Ticket";
-// import { Flight } from "../Airline/Flight/Flight";
 import { Trip } from "../Trip/Trip";
+import { MealType } from "../enum/MealType";    
 
 export class Booking {
     private bookingReferenceNumber: string;
@@ -10,22 +10,22 @@ export class Booking {
     private passenger: Passenger;
     private ticket: Ticket;
     private trip: Trip;
-    // private flights: Flight[];
     private creditCard: CreditCard;
+    private meal?: MealType;
     constructor(
         bookingReferenceNumber: string, 
         price: number, 
         passenger: Passenger, 
-        ticket: Ticket
+        ticket: Ticket,
+        meal?: MealType,
     ) {
         this.bookingReferenceNumber = bookingReferenceNumber;
         this.price = price;
         this.passenger = passenger;
         this.ticket = ticket;
-        // this.flights = [];
     }
 
-    public getReference(): string {
+    public getReferenceNumber(): string {
         return this.bookingReferenceNumber;
     }
 
@@ -40,13 +40,9 @@ export class Booking {
     public getTicket(): Ticket {
         return this.ticket;
     }
+    public getMeal() {
+        return this.meal;
+    }
 
-    // public addFlight(flight: Flight): void {
-    //     this.flights.push(flight);
-    // }
-
-    // public getFlights(): Flight[] {
-    //     return this.flights;
-    // }
     
 }

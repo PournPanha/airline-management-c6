@@ -9,14 +9,13 @@ export class Passenger extends Person {
     private bookings: Booking[] = [];
     private ticket: Ticket;
     constructor(
-        firstName: string,
-        lastName: string,
+        name: string,
         age: number,
         gender: Gender,
         phoneNumber: string,
         nationality: string // nationality added here
     ) {
-        super(firstName, lastName, age,gender, phoneNumber,nationality);
+        super(name, age,gender, phoneNumber,nationality);
     }
 
     addBag(bag: Bag): void {
@@ -25,5 +24,7 @@ export class Passenger extends Person {
 
     getBags(): Bag[] {
         return this.bags;
-    }}
+    }
+}
+
     

@@ -1,9 +1,7 @@
-
-import { Employee } from "../../Person/Employee/Employee";
+import { Employee } from "./Employee"
 import { Gender } from "../../enum/Gender";
 
-export class Pilot extends Employee {
-    private license_number: number;
+export class coPilot extends Employee {
     constructor(
         name: string,
         gender: Gender,
@@ -11,7 +9,6 @@ export class Pilot extends Employee {
         phone: string,
         nationality: string,
         salary: number,
-        license_number: number
     ) {
         super(name, gender, age, phone, nationality, salary);
     }

@@ -28,23 +28,9 @@ export class Flight {
         this.passengerSeats.push(new SeatPassenger(passenger, seat));
     }
 
-    getPassengerSeats(): SeatPassenger[] {
+
+    getAirplane(){
         return this.passengerSeats;
     }
 
-    getGate(): Gate {
-        return this.gate;
-    }
-    getFlightNumber(): string {
-        return this.flightNumber;
-    }
-    getStartTime(): DateTime {
-        return this.departureTime;
-    }
-    getEndTime(): DateTime {
-        return this.arrivalTime;
-    }
-    getAeroplane(): Airplane {
-        return this.airplane;
-    }
 }
